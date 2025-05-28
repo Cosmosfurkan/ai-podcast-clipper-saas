@@ -49,6 +49,7 @@ export async function signUp(data: SignupFormValues): Promise<SignupResult> {
     });
 
     return { success: true };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return { success: false, error: "An error occured during signup" };
   }

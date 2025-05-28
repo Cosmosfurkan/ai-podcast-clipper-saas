@@ -19,6 +19,7 @@ function ClipCard({ clip }: { clip: Clip }) {
         } else if (result.error) {
           console.error("Failed to get play url: " + result.error);
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
       } finally {
         setIsLoadingUrl(false);

@@ -4,7 +4,8 @@ import type { VariantProps } from "class-variance-authority";
 import { ArrowLeftIcon, CheckIcon } from "lucide-react";
 import Link from "next/link";
 import { createCheckoutSession, type PriceId } from "~/actions/stripe";
-import { Button, buttonVariants } from "~/components/ui/button";
+import { Button } from "~/components/ui/button";
+import type { buttonVariants as ButtonVariants } from "~/components/ui/button";
 import {
   Card,
   CardContent,
@@ -21,7 +22,7 @@ interface PricingPlan {
   description: string;
   features: string[];
   buttonText: string;
-  buttonVariant: VariantProps<typeof buttonVariants>["variant"];
+  buttonVariant: VariantProps<typeof ButtonVariants>["variant"];
   isPopular?: boolean;
   savePercentage?: string;
   priceId: PriceId;
